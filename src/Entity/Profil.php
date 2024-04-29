@@ -2,10 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\ProfilRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use App\Repository\ProfilRepository;
+use ApiPlatform\Metadata\ApiResource;
 
+#[ApiResource()]
 #[ORM\Entity(repositoryClass: ProfilRepository::class)]
 class Profil
 {
