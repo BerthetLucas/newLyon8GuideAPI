@@ -28,7 +28,7 @@ class Shop
     private ?string $streetName = null;
 
     #[ORM\Column(nullable: true)]
-    private ?int $zipCode = null;
+    private ?string $zipCode = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $city = null;
@@ -36,7 +36,7 @@ class Shop
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $type = null;
 
-    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
     private ?\DateTimeInterface $createdAt = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
@@ -213,5 +213,4 @@ class Shop
 
         return $this;
     }
-
 }
